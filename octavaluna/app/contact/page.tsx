@@ -14,12 +14,12 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Us",
-    details: ["123 Luxury Lane", "Barcelona, Spain 08001"],
+    details: ["Costa Rica", "Concepcion de tres rios"],
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+34 123 456 789", "+34 987 654 321"],
+    details: ["+506 8371-8307", "+506 8334-0049"],
   },
   {
     icon: Mail,
@@ -156,7 +156,7 @@ export default function ContactPage() {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="+34 123 456 789"
+                      placeholder="+506 1234 5678 "
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="border-border focus:border-accent focus:ring-accent"
