@@ -24,7 +24,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 overflow-scroll">
       <div className="h-0.5 w-full bg-accent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
@@ -37,52 +37,54 @@ export function Header() {
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="w-[300px] bg-background">
-                <div className="h-0.5 w-12 bg-accent mb-8" />
-                <nav className="flex flex-col gap-6">
-                  {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="font-serif text-2xl tracking-wide text-foreground transition-colors ml-5"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </nav>
-                
-                {/* Profile section for mobile */}
-                <div className="mt-15 pt-6 border-t border-muted ml-5">
-                  <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Account</p>
-                  <div className="flex flex-col gap-4">
-                    <Link
-                      href="/account?tab=login"
-                      className="flex items-center gap-3 text-foreground transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <LogIn className="h-5 w-5" />
-                      <span className="font-medium">Sign In</span>
-                    </Link>
-                    <Link
-                      href="/account?tab=register"
-                      className="flex items-center gap-3 text-foreground transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <UserPlus className="h-5 w-5" />
-                      <span className="font-medium">Create Account</span>
-                    </Link>
-                    <Link
-                      href="/account/wishlist"
-                      className="flex items-center gap-3 text-foreground transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <Heart className="h-5 w-5" />
-                      <span className="font-medium">Wishlist</span>
-                    </Link>
+              <SheetContent side="left" className="w-[300px] bg-background overflow-y-auto">
+                <div className="flex flex-col min-h-full pb-8">
+                  <div className="h-0.5 w-12 bg-accent mb-8 shrink-0" />
+                  <nav className="flex flex-col gap-6 ml-5">
+                    {navigation.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="font-serif text-2xl tracking-wide text-foreground transition-colors"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </nav>
+                  
+                  {/* Profile section for mobile */}
+                  <div className="mt-15 ml-5 pt-6 border-t border-muted">
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Account</p>
+                    <div className="flex flex-col gap-4">
+                      <Link
+                        href="/account?tab=login"
+                        className="flex items-center gap-3 text-foreground transition-colors"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <LogIn className="h-5 w-5" />
+                        <span className="font-medium">Sign In</span>
+                      </Link>
+                      <Link
+                        href="/account?tab=register"
+                        className="flex items-center gap-3 text-foreground transition-colors "
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <UserPlus className="h-5 w-5" />
+                        <span className="font-medium">Create Account</span>
+                      </Link>
+                      <Link
+                        href="/account/wishlist"
+                        className="flex items-center gap-3 text-foreground transition-colors"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <Heart className="h-5 w-5" />
+                        <span className="font-medium">Wishlist</span>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-                <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
+
+                  <div className="mt-26 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
                   <p className="text-xs text-muted-foreground">
                     © {new Date().getFullYear()} G-Graph Systems. All rights reserved.
                   </p>
@@ -94,6 +96,7 @@ export function Header() {
                       Terms of Service
                     </Link> 
                   </div>
+                </div>
                 </div>
               </SheetContent>
             </Sheet>
