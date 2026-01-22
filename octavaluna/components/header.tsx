@@ -44,7 +44,7 @@ export function Header() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="font-serif text-2xl tracking-wide text-foreground transition-colors hover:text-accent ml-5"
+                      className="font-serif text-2xl tracking-wide text-foreground transition-colors ml-5"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -58,7 +58,7 @@ export function Header() {
                   <div className="flex flex-col gap-4">
                     <Link
                       href="/account?tab=login"
-                      className="flex items-center gap-3 text-foreground transition-colors hover:text-accent"
+                      className="flex items-center gap-3 text-foreground transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       <LogIn className="h-5 w-5" />
@@ -66,7 +66,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/account?tab=register"
-                      className="flex items-center gap-3 text-foreground transition-colors hover:text-accent"
+                      className="flex items-center gap-3 text-foreground transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       <UserPlus className="h-5 w-5" />
@@ -74,7 +74,7 @@ export function Header() {
                     </Link>
                     <Link
                       href="/account/wishlist"
-                      className="flex items-center gap-3 text-foreground transition-colors hover:text-accent"
+                      className="flex items-center gap-3 text-foreground transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       <Heart className="h-5 w-5" />
@@ -98,7 +98,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium uppercase tracking-widest text-foreground transition-colors hover:text-accent"
+                className="text-sm font-medium uppercase tracking-widest text-foreground transition-colors"
               >
                 {item.name}
               </Link>
@@ -107,13 +107,13 @@ export function Header() {
 
           {/* Right icons */}
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" className="text-foreground hover:text-accent">
+            <Button variant="ghost" size="icon" className="text-foreground">
               <Search className="h-5 w-5" />
               <span className="sr-only">Search</span>
             </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="hidden sm:flex text-foreground hover:text-accent">
+                <Button variant="ghost" size="icon" className="hidden sm:flex text-foreground">
                   <User className="h-5 w-5" />
                   <span className="sr-only">Account</span>
                 </Button>
@@ -124,27 +124,27 @@ export function Header() {
                   <p className="text-xs text-muted-foreground">Sign in to your account</p>
                 </div>
                 <DropdownMenuItem asChild className="cursor-pointer">
-                  <Link href="/account?tab=login" className="flex items-center gap-2 text-foreground hover:text-accent">
+                  <Link href="/account?tab=login" className="flex items-center gap-2 text-foreground">
                     <LogIn className="h-4 w-4" />
                     <span>Sign In</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="cursor-pointer">
-                  <Link href="/account?tab=register" className="flex items-center gap-2 text-foreground hover:text-accent">
+                  <Link href="/account?tab=register" className="flex items-center gap-2 text-foreground">
                     <UserPlus className="h-4 w-4" />
                     <span>Create Account</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator className="bg-muted" />
                 <DropdownMenuItem asChild className="cursor-pointer">
-                  <Link href="/account/wishlist" className="flex items-center gap-2 text-foreground hover:text-accent">
+                  <Link href="/account/wishlist" className="flex items-center gap-2 text-foreground">
                     <Heart className="h-4 w-4" />
                     <span>Wishlist</span>
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button variant="ghost" size="icon" className="relative text-foreground hover:text-accent">
+            <Button variant="ghost" size="icon" className="relative text-foreground">
               <ShoppingBag className="h-5 w-5" />
               <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-medium text-accent-foreground">
                 0
