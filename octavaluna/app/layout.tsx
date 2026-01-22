@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: "Octava Luna | Fine Jewelry",
   description:
     "Discover timeless elegance with our handcrafted jewelry collection. Each piece tells a story of artistry and sophistication.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({

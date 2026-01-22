@@ -44,13 +44,44 @@ export function Header() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="font-serif text-2xl tracking-wide text-foreground transition-colors hover:text-accent"
+                      className="font-serif text-2xl tracking-wide text-foreground transition-colors hover:text-accent ml-5"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
                     </Link>
                   ))}
                 </nav>
+                
+                {/* Profile section for mobile */}
+                <div className="mt-120 pt-6 border-t border-muted ml-5">
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Account</p>
+                  <div className="flex flex-col gap-4">
+                    <Link
+                      href="/account?tab=login"
+                      className="flex items-center gap-3 text-foreground transition-colors hover:text-accent"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <LogIn className="h-5 w-5" />
+                      <span className="font-medium">Sign In</span>
+                    </Link>
+                    <Link
+                      href="/account?tab=register"
+                      className="flex items-center gap-3 text-foreground transition-colors hover:text-accent"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <UserPlus className="h-5 w-5" />
+                      <span className="font-medium">Create Account</span>
+                    </Link>
+                    <Link
+                      href="/account/wishlist"
+                      className="flex items-center gap-3 text-foreground transition-colors hover:text-accent"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <Heart className="h-5 w-5" />
+                      <span className="font-medium">Wishlist</span>
+                    </Link>
+                  </div>
+                </div>
               </SheetContent>
             </Sheet>
           </div>
@@ -76,13 +107,13 @@ export function Header() {
 
           {/* Right icons */}
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" className="text-foreground">
+            <Button variant="ghost" size="icon" className="text-foreground hover:text-accent">
               <Search className="h-5 w-5" />
               <span className="sr-only">Search</span>
             </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="hidden sm:flex text-foreground">
+                <Button variant="ghost" size="icon" className="hidden sm:flex text-foreground hover:text-accent">
                   <User className="h-5 w-5" />
                   <span className="sr-only">Account</span>
                 </Button>
@@ -93,7 +124,7 @@ export function Header() {
                   <p className="text-xs text-muted-foreground">Sign in to your account</p>
                 </div>
                 <DropdownMenuItem asChild className="cursor-pointer">
-                  <Link href="/account?tab=login" className="flex items-center gap-2 text-foreground">
+                  <Link href="/account?tab=login" className="flex items-center gap-2 text-foreground hover:text-accent">
                     <LogIn className="h-4 w-4" />
                     <span>Sign In</span>
                   </Link>
@@ -113,7 +144,7 @@ export function Header() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button variant="ghost" size="icon" className="relative text-foreground">
+            <Button variant="ghost" size="icon" className="relative text-foreground hover:text-accent">
               <ShoppingBag className="h-5 w-5" />
               <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-medium text-accent-foreground">
                 0

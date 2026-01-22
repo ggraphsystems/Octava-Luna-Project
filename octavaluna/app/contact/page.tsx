@@ -211,7 +211,7 @@ export default function ContactPage() {
               <div className="sticky top-28">
                 <div className="aspect-square bg-secondary overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.5799859843147!2d2.1686!3d41.3874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIzJzE0LjYiTiAywrAxMCcwNy4wIkU!5e0!3m2!1sen!2ses!4v1234567890"
+                    src="https://maps.google.com/maps?q=9.923064,-83.999539&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -219,7 +219,7 @@ export default function ContactPage() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Octava Luna Location"
-                    className="grayscale"
+                    className=""
                   />
                 </div>
                 <div className="mt-6 p-6 bg-accent text-accent-foreground">
