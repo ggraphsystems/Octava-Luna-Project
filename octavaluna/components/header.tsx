@@ -53,7 +53,7 @@ export function Header() {
                 </nav>
                 
                 {/* Profile section for mobile */}
-                <div className="mt-120 pt-6 border-t border-muted ml-5">
+                <div className="mt-15 pt-6 border-t border-muted ml-5">
                   <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Account</p>
                   <div className="flex flex-col gap-4">
                     <Link
@@ -80,6 +80,19 @@ export function Header() {
                       <Heart className="h-5 w-5" />
                       <span className="font-medium">Wishlist</span>
                     </Link>
+                  </div>
+                </div>
+                <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
+                  <p className="text-xs text-muted-foreground">
+                    © {new Date().getFullYear()} G-Graph Systems. All rights reserved.
+                  </p>
+                  <div className="flex gap-6">
+                    <Link href="/privacy" className="text-xs text-muted-foreground transition-colors hover:text-accent">
+                      Privacy Policy
+                    </Link>
+                    <Link href="/terms" className="text-xs text-muted-foreground transition-colors hover:text-accent">
+                      Terms of Service
+                    </Link> 
                   </div>
                 </div>
               </SheetContent>
