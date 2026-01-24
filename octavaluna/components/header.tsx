@@ -24,7 +24,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 overflow-scroll">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="h-0.5 w-full bg-accent" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
@@ -37,7 +37,7 @@ export function Header() {
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="w-[300px] bg-background overflow-y-auto">
+              <SheetContent side="left" className="w-[300px] bg-background">
                 <div className="flex flex-col min-h-full pb-8">
                   <div className="h-0.5 w-12 bg-accent mb-8 shrink-0" />
                   <nav className="flex flex-col gap-6 ml-5">
